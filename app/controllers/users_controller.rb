@@ -32,7 +32,7 @@ class UsersController < ApplicationController
     end
   end
 
-  #user sign in
+  # user sign in
   get '/login' do
     @error_message = params[:error]
     if !session[:user_id]
@@ -49,6 +49,16 @@ class UsersController < ApplicationController
       redirect "/lists"
     else
       redirect '/signup'
+    end
+  end
+
+  # user logout
+  get '/logout' do
+    if session[:user_id] != nil
+      session.clear
+      redirect to '/login'
+    else
+      redirect to '/'
     end
   end
 end
