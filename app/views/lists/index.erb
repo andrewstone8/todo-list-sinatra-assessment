@@ -1,0 +1,6 @@
+<% @lists.each do |list| %>
+  <%= list.name %>
+  <br>
+  <a href="/lists/<%=list.id%>/edit">Edit</a>
+  <br>
+<% end %>

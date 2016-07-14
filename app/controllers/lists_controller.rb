@@ -3,7 +3,7 @@ class ListsController < ApplicationController
   # list homepage
   get "/lists" do
     redirect_if_not_logged_in
-    @lists = Lists.all
+    @lists = List.all
     erb :'lists/index'
   end
 
