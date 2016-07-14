@@ -1,0 +1,6 @@
+<% @tasks.each do |task| %>
+  <%= task.name %><br />
+  <a href="/tasks/<%=task.id%>/edit">Edit</a>
+  <br />
+  <br />
+<% end %>
