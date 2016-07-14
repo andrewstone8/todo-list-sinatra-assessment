@@ -28,7 +28,7 @@ class ListsController < ApplicationController
     unless List.valid_params?(params)
       redirect "/lists/#{@list.id}/edit?error=invalid list"
     end
-    @list.update(params.select{|list|list=="name"})
+    @list.update(params.select{|k|k=="name"})
     redirect "/lists/#{@list.id}"
   end
 

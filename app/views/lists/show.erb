@@ -4,7 +4,7 @@
   <h2>Tasks</h2>
   <ul>
   <% @list.tasks.each do |task| %>
-    <li><a href="/tasks/<%=task.id%>"><%= task.name %></a></li>
+    <li><a href="/tasks/<%=task.id%>"><%= task.content %></a></li>
   <% end%>
   </ul>
   <a href="/lists/<%=@list.id%>/edit">Edit</a>
