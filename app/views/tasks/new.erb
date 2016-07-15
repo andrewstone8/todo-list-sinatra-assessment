@@ -1,8 +1,9 @@
-<h1>Add a New Task</h1>
-
+<h3>Add a New Task</h3>
+<br>
 <form action="/tasks" method="POST">
-  <label> Task Content </label>
-  <input type="text" name="content"> </br>
+  <label> Task: </label>
+  <input type="text" name="content"> 
+  <br><br>
 
   <label> Which List does this task belong to? </label>
   <select name="list_id">
@@ -10,6 +11,6 @@
       <option value=<%=list.id %>><%= list.name %></option>
     <% end %>
   </select>
-
-  <input type="submit" value="Create">
+  <br><br>
+  <input type="submit" class="btn btn-primary">
 </form>

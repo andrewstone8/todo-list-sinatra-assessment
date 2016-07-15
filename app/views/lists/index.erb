@@ -1,6 +1,9 @@
+<h3><%= current_user.username%>'s Lists</h3>
+<br>
 <% @lists.each do |list| %>
-  <%= list.name %>
-  <br>
-  <a href="/lists/<%=list.id%>/edit">Edit</a>
-  <br>
+  <ul>
+    <li><h4><%= list.name %></h4></li>
+    <a href="/lists/<%=list.id%>/edit">Edit</a>
+    <br>
+  </ul>
 <% end %>
