@@ -1,6 +1,6 @@
-  <%= @task.content %><br />
-  List: <a href="/lists/<%=@task.list.id%>"><%= @task.list.name %></a> 
+  <h3><%= @task.content %></h3>
+  <h4>List: <a href="/lists/<%=@task.list.id%>"><%= @task.list.name %></a></h4>
   <br>
-  <a href="/tasks/<%=@task.id%>/edit">Edit</a>
+  <a href="/tasks/<%=@task.id%>/edit">Edit Task</a>
   <br>
   <br>
