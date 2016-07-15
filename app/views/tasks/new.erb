@@ -4,7 +4,7 @@
   <label> Task Content </label>
   <input type="text" name="content"> </br>
 
-  <label> Which list does this task belong to? </label>
+  <label> Which List does this task belong to? </label>
   <select name="list_id">
     <% current_user.lists.each do |list| %>
       <option value=<%=list.id %>><%= list.name %></option>
