@@ -7,7 +7,7 @@
 
   <label> Which List does this task belong to? </label>
   <select name="list_id">
-    <% current_user.lists.each do |list| %>
+    <% @lists.each do |list| %>
       <option value=<%=list.id %>><%= list.name %></option>
     <% end %>
   </select>
